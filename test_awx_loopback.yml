@@ -12,6 +12,7 @@
       job_template: "HelloWorld"
       controller_host: 172.16.50.1:80
       controller_oauthtoken: CjDw4KIEobnXcWMfz40Ozc3ogHJVnR
+      validate_certs: no
       extra_vars:
         var1: "My First Variable"
         var2: "My Second Variable"
