@@ -1,3 +1,11 @@
+---
+- name: create destination volume and snapmirror
+  hosts: "localhost"
+  become: no
+  gather_facts: no
+
+  collections:
+  - awx.awx
 - name: Launch a job template with extra_vars on remote controller instance
   job_launch:
     job_template: "HelloWorld"
