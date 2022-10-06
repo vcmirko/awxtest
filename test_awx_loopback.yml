@@ -6,17 +6,18 @@
 
   collections:
   - awx.awx
-- name: Launch a job template with extra_vars on remote controller instance
-  job_launch:
-    job_template: "HelloWorld"
-    controller_oauthtoken: CjDw4KIEobnXcWMfz40Ozc3ogHJVnR
-    extra_vars:
-      var1: "My First Variable"
-      var2: "My Second Variable"
-      var3: "My Third Variable"
-    job_type: run
-  register: job
-- name: Wait for job max 120s
-  job_wait:
-    job_id: "{{ job.id }}"
-    timeout: 120
+  tasks:
+  - name: Launch a job template with extra_vars on remote controller instance
+    job_launch:
+      job_template: "HelloWorld"
+      controller_oauthtoken: CjDw4KIEobnXcWMfz40Ozc3ogHJVnR
+      extra_vars:
+        var1: "My First Variable"
+        var2: "My Second Variable"
+        var3: "My Third Variable"
+      job_type: run
+    register: job
+  - name: Wait for job max 120s
+    job_wait:
+      job_id: "{{ job.id }}"
+      timeout: 120
