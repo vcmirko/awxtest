@@ -10,7 +10,7 @@
   - name: Launch a job template with extra_vars on remote controller instance
     job_launch:
       job_template: "HelloWorld"
-      controller_host: 172.16.50.1
+      controller_host: 172.16.50.1:80
       controller_oauthtoken: CjDw4KIEobnXcWMfz40Ozc3ogHJVnR
       extra_vars:
         var1: "My First Variable"
