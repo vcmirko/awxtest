@@ -10,7 +10,8 @@
   - name: Launch a job template with extra_vars on remote controller instance
     job_launch:
       job_template: "HelloWorld"
-      controller_oauthtoken: CjDw4KIEobnXcWMfz40Ozc3ogHJVnR
+      controller_username: admin
+      controller_password: Netapp12
       extra_vars:
         var1: "My First Variable"
         var2: "My Second Variable"
